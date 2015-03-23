@@ -1,0 +1,72 @@
+﻿@model IBFree.Models.BadFoods
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BadFoods</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fructan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fructan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sorbitol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sorbitol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mannitol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mannitol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fructose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fructose)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lactose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lactose)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

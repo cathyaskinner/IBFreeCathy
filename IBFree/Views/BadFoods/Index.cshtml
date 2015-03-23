@@ -1,0 +1,63 @@
+﻿@model IEnumerable<IBFree.Models.BadFoods>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fructan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sorbitol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mannitol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fructose)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lactose)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fructan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sorbitol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mannitol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fructose)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lactose)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NameId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NameId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NameId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model IBFree.Models.BadFoods
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BadFoods</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fructan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fructan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sorbitol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sorbitol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mannitol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mannitol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fructose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fructose)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lactose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lactose)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NameId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
