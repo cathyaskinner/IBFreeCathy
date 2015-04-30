@@ -16,7 +16,7 @@ namespace IBFree.Controllers
 
         public ActionResult BadFoodList()
         {
-            // baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajjjjjjjjjjjjjjjjj!
+            
             var foods = db.BadFood.ToList();
             return View(foods);
         }
